@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOIT - Pomodoro Timer</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Lora:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></head>
+<body>
+    <div class="page-container">
+        <nav class="navbar">
+            <div class="nav-logo">DOIT</div>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="index.html">Main</a></li>
+                <li class="nav-item"><a href="calendar.html">Calendar</a></li>
+                <li class="nav-item"><a href="companion.html">Companion</a></li>
+                <li class="nav-item"><a href="tasks.html">Tasks</a></li>
+                <li class="nav-item"><a href="timer.html" class="active">Timer</a></li>
+                <li class="nav-item"><a href="login.html" class="login-link">Login</a></li>
+            </ul>
+        </nav>
+
+        <div class="page-content">
+            <div class="page-header">
+                <h1>The Timekeeper</h1>
+                <p class="subtitle">Focus with purpose, rest with intention</p>
+            </div>
+
+            <div class="timer-container">
+                <div class="timer-column">
+                    <div class="timer-card">
+                        <div class="timer-type-selector">
+                            <button class="timer-type-btn active" data-time="25">
+                                Study Session (25m)
+                            </button>
+                            <button class="timer-type-btn" data-time="5">
+                                Short Break (5m)
+                            </button>
+                            <button class="timer-type-btn" data-time="15">
+                                Long Break (15m)
+                            </button>
+                        </div>
+                        
+                        <div class="timer-clock">
+                            <div class="timer-display" id="timerDisplay">25:00</div>
+                            <div class="timer-progress-ring">
+                                <svg class="progress-ring" width="300" height="300">
+                                    <circle class="progress-ring-circle-bg" cx="150" cy="150" r="120" />
+                                    <circle class="progress-ring-circle" id="progressRing" cx="150" cy="150" r="120" />
+                                </svg>
+                            </div>
+                        </div>
+                        
+                        <div class="timer-controls">
+                            <button class="timer-control-btn" id="startTimer">
+                                <i class="fas fa-play"></i>
+                                <span class="btn-text">Start</span>
+                            </button>
+                            <button class="timer-control-btn" id="pauseTimer" disabled>
+                                <i class="fas fa-pause"></i>
+                                <span class="btn-text">Pause</span>
+                            </button>
+                            <button class="timer-control-btn" id="resetTimer">
+                                <i class="fas fa-redo"></i>
+                                <span class="btn-text">Reset</span>
+                            </button>
+                        </div>
+                        
+                        <div class="timer-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Sessions Completed:</span>
+                                <span class="stat-value" id="sessionCount">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Focus Time Today:</span>
+                                <span class="stat-value" id="focusTime">0 mins</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sound-card">
+                        <h3>Ambience</h3>
+                        <div class="sound-controls">
+                            <div class="sound-selector">
+                                <select id="soundTheme">
+                                    <option value="library">Library Ambience</option>
+                                    <option value="rain">Rainy Window</option>
+                                    <option value="fire">Fireplace</option>
+                                    <option value="ocean">Waves</option>
+                                    <option value="none">Silent Study</option>
+                                </select>
+                            </div>
+                            
+                            <div class="volume-control">
+                                <i class="fas fa-volume-down"></i>
+                                <input type="range" id="volumeSlider" min="0" max="100" value="50">
+                                <i class="fas fa-volume-up"></i>
+                            </div>
+                            
+                            <label class="sound-toggle">
+                                <input type="checkbox" id="soundToggle" checked>
+                                <span class="toggle-label">Sound On</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="companion-column">
+                    <div class="session-history-card">
+                        <h3>Recent Sessions</h3>
+                        <ul class="session-list" id="sessionHistory">
+                            <li class="session-item empty-message">No sessions completed yet. Start your first timer!</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="timer-quote-card">
+                        <h3>Motivation</h3>
+                        <blockquote>
+                            "Discipline is the bridge between goals and accomplishment."
+                            <cite>— Jim Rohn</cite>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Session Complete Modal -->
+    <div class="modal" id="sessionCompleteModal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <h2>Session Complete!</h2>
+                </header>
+                <section class="modal-card-body">
+                    <div class="session-complete-message">
+                        <p>Well done! You've completed a study session.</p>
+                        <p id="encouragementMessage">Your diligence today creates freedom tomorrow. Keep up the excellent work!</p>
+                    </div>
+                </section>
+                <footer class="modal-card-foot">
+                    <button id="startBreakBtn" class="btn primary-btn">Start Break</button>
+                    <button id="continueWorkingBtn" class="btn secondary-btn">Continue Working</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/pomodoro.js"></script>
+</body>
+</html>

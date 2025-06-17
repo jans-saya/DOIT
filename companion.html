@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOIT - AI Companion</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Lora:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></head>
+<body>
+    <div class="page-container">
+        <nav class="navbar">
+            <div class="nav-logo">DOIT</div>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="index.html">Main</a></li>
+                <li class="nav-item"><a href="calendar.html">Calendar</a></li>
+                <li class="nav-item"><a href="companion.html" class="active">Companion</a></li>
+                <li class="nav-item"><a href="tasks.html">Tasks</a></li>
+                <li class="nav-item"><a href="timer.html">Timer</a></li>
+                <li class="nav-item"><a href="login.html" class="login-link">Login</a></li>
+            </ul>
+        </nav>
+
+        <div class="page-content">
+            <div class="page-header">
+                <h1>Your AI Companion</h1>
+                <p class="subtitle">Share your thoughts, seek advice, or simply chat</p>
+            </div>
+            
+<button id="clearChatBtn" class="btn secondary-btn" style="margin-bottom: 10px;">Clear Chat History</button>
+
+            <div class="companion-container">
+                <div class="chat-area">
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message companion-message">
+                            <div class="message-content">
+                                <p>Hi! I'm here to assist with your plans. How can I help today?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input-area">
+                        <textarea id="messageInput" placeholder="Write to your companion..."></textarea>
+                        <button id="sendMessage" class="send-btn">
+                            <i class="fas fa-feather-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="companion-sidebar">
+                    <div class="companion-profile">
+                        <div class="profile-image">
+                            <img src="assets/images/companion-portrait.jpg" alt="Companion portrait">
+                        </div>
+                        <h3>Your Dedicated Companion</h3>
+                        <p class="companion-description">I'm here to listen, motivate, and support you through your journey.</p>
+                    </div>
+                    
+                    <div class="mood-check">
+                        <h3>How are you feeling today?</h3>
+                        <div class="mood-buttons">
+                            <button class="mood-btn" data-mood="terrible">😢</button>
+                            <button class="mood-btn" data-mood="bad">😕</button>
+                            <button class="mood-btn" data-mood="neutral">😐</button>
+                            <button class="mood-btn" data-mood="good">🙂</button>
+                            <button class="mood-btn" data-mood="great">😄</button>
+                        </div>
+                    </div>
+                    
+                    <div class="suggestion-box">
+                        <h3>Conversation Starters</h3>
+                        <ul class="suggestion-list">
+                            <li><button class="suggestion-btn" data-message="I'm feeling overwhelmed today.">I'm feeling overwhelmed today</button></li>
+                            <li><button class="suggestion-btn" data-message="I need help focusing on my tasks.">I need help focusing on my tasks</button></li>
+                            <li><button class="suggestion-btn" data-message="Can you help me break down a big goal?">Help me break down a big goal</button></li>
+                            <li><button class="suggestion-btn" data-message="I need some motivation.">I need some motivation</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/chat.js"></script>
+    
+</body>
+</html>

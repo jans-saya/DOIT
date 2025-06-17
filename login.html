@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOIT - Login</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Lora:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></head>
+<body>
+    <div class="page-container">
+        <nav class="navbar">
+            <div class="nav-logo">DOIT</div>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="index.html">Main</a></li>
+                <li class="nav-item"><a href="calendar.html">Calendar</a></li>
+                <li class="nav-item"><a href="companion.html">Companion</a></li>
+                <li class="nav-item"><a href="tasks.html">Tasks</a></li>
+                <li class="nav-item"><a href="timer.html">Timer</a></li>
+                <li class="nav-item"><a href="login.html" class="login-link active">Login</a></li>
+            </ul>
+        </nav>
+
+        <div class="page-content">
+            <div class="login-container">
+                <div class="login-card">
+                    <div class="login-header">
+                        <h1>Sign in or Sign up</h1>
+                    </div>
+                    
+                    <div class="auth-tabs">
+                        <button class="auth-tab active" data-tab="login">Sign In</button>
+                        <button class="auth-tab" data-tab="register">Register</button>
+                    </div>
+                    
+                    <div class="auth-content">
+
+                        <form id="loginForm" class="auth-form active">
+                            <div class="form-group">
+                                <label for="loginEmail">Email Address</label>
+                                <input type="email" id="loginEmail" placeholder="your.email@example.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="loginPassword">Password</label>
+                                <div class="password-input">
+                                    <input type="password" id="loginPassword" placeholder="••••••••" required>
+                                    <button type="button" class="toggle-password">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <div class="forgot-password">
+                                    <a href="#">Forgot password?</a>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group remember-me">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="rememberMe">
+                                    <span class="checkbox-custom"></span>
+                                    Remember me
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn primary-btn login-btn">
+                                Sign In
+                            </button>
+                            
+                            <div class="divider">
+                                <span>or continue with</span>
+                            </div>
+                            
+                            <div class="social-login">
+                                <button type="button" class="social-btn google-btn">
+                                    <i class="fab fa-google"></i>
+                                </button>
+                                <button type="button" class="social-btn apple-btn">
+                                    <i class="fab fa-apple"></i>
+                                </button>
+                                <button type="button" class="social-btn facebook-btn">
+                                    <i class="fab fa-facebook-f"></i>
+                                </button>
+                            </div>
+                        </form>
+                        
+                        <!-- Register Form -->
+                        <form id="registerForm" class="auth-form">
+                            <div class="form-group">
+                                <label for="registerName">Full Name</label>
+                                <input type="text" id="registerName" placeholder="Your Name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="registerEmail">Email Address</label>
+                                <input type="email" id="registerEmail" placeholder="your.email@example.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="registerPassword">Password</label>
+                                <div class="password-input">
+                                    <input type="password" id="registerPassword" placeholder="••••••••" required>
+                                    <button type="button" class="toggle-password">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <div class="password-strength">
+                                    <div class="strength-meter">
+                                        <div class="strength-segment"></div>
+                                        <div class="strength-segment"></div>
+                                        <div class="strength-segment"></div>
+                                        <div class="strength-segment"></div>
+                                    </div>
+                                    <span class="strength-text">Password strength</span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group terms-agreement">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="agreeTerms" required>
+                                    <span class="checkbox-custom"></span>
+                                    I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn primary-btn register-btn">
+                                Create Account
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="login-quote">
+                    <blockquote>
+                        "The beautiful thing about learning is that no one can take it away from you."
+                        <cite>— B.B. King</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/app.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
