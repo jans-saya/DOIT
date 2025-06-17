@@ -12,13 +12,13 @@ DOIT is an AI-powered companion web application designed to support mental welln
 * Enable seamless integration between different productivity modules
   
 ## Technology stack
-Frontend: HTML5, CSS3, Vanilla JavaScript
-Chatbot API: Anthropic’s Claude API Sonnet-5
-Storage: Local Storage
-Timer: Custom JS Timer
-Notifications: Custom In-app notifications
-Deployment: Netlify
-Backend: A simple python server for Anthropic integration
+- Frontend: HTML5, CSS3, Vanilla JavaScript
+- Chatbot API: Anthropic’s Claude API Sonnet-5
+- Storage: Local Storage
+- Timer: Custom JS Timer
+- Notifications: Custom In-app notifications
+- Deployment: Netlify
+- Backend: A simple python server for Anthropic integration
 
 What succeeded?
 	An aesthetic dashboard, a Calendar with possibility of adding and editing the events, a Chatbot which can handle a deep conversation and offer emotional support, as well as simplifying creations of to-do lists and events. With a minimum input adds tasks to the to-do list and events to the calendar. Shows notifications after completing tasks.
